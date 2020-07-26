@@ -27,6 +27,13 @@ led_setup_t leds_teal_salmon[] = {
     { .end = 1 },
 };
 
+// Blue <-> White <-> Blue
+led_setup_t leds_blue_white_blue[] = {
+    { .hs = 0,  .he = 50,  .rs = 0,   .re = 255, .gs = 0,   .ge = 255, .bs = 255, .be = 255, .ef = EF_OVER },
+    { .hs = 50, .he = 100, .rs = 255, .re = 0,   .gs = 255, .ge = 0,   .bs = 255, .be = 255, .ef = EF_OVER },
+    { .end = 1 },
+};
+
 //Yellow
 led_setup_t leds_yellow[] = {
     { .hs = 0, .he = 100, .rs = 255, .re = 255, .gs = 255, .ge = 255, .bs = 0, .be = 0, .ef = EF_NONE },
@@ -105,6 +112,7 @@ led_setup_t leds_rainbow_s[] = {
 //Add the new animation name to the list below following its format
 
 void *led_setups[] = {
+    leds_blue_white_blue,
     leds_white,
     leds_rainbow_s,
     leds_rainbow_ns,
